@@ -4,6 +4,9 @@ autoprefixer = require 'autoprefixer-stylus'
 contentful   = require 'roots-contentful'
 config       = require './contentful'
 marked       = require 'marked'
+webpack      = require 'roots-webpack'
+wbpkconfig  = require './webpack.config.js'
+path         = require 'path'
 
 module.exports =
   ignores: [
@@ -17,4 +20,9 @@ module.exports =
   locals:
     marked: marked
 
-  extensions: [contentful(config)]
+  extensions: [
+               contentful(config)
+              ]
+
+  jade:
+    pretty: true

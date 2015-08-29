@@ -1,2 +1,52 @@
-extends layout
-
+doctype html
+// Set up for modernizr
+html.no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    meta(name="description" content="")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    script(src="js/vendor/modernizr.js")
+    
+    // Title for page
+    title Bowen Island Garden Club
+    // Main Style Sheet
+    link(rel="stylesheet" href="css/main.css")
+    
+    <!--[if lt IE 9]>
+    <script src="js/vendor/respond.min.js">
+    </script>
+    <script src="js/vendor/classList.js">
+    </script>
+    <script src="js/vendor/eventListener.polyfill.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js">
+    </script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js">
+    </script>
+    <![endif]-->
+    
+    link(href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css')
+    link(href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css')
+    
+  body.type-system-geometric
+    <!--[if lte IE 7]>
+    <p class="chromeframe">You are using an older browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+    
+    //- Include the navigation template
+    include ./templates/navigation.jade
+    
+    main(
+      role="main"
+      itemscope
+      itemtype="http://schema.org/Organization"
+    )
+    
+    //- Include the welcome template
+    include ./templates/welcome.jade
+    
+    //- Include the upcoming template
+    include ./templates/upcoming.jade
+    
+    script(src="js/bundle.js")
