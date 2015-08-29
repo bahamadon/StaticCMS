@@ -1,0 +1,43 @@
+//- Upcoming events section
+section#upcoming
+  h1 Upcoming Events
+  .container
+    each event in contentful.entries
+      .row(
+        itemprop="event"
+        itemscope
+        itemtype="http://schema.org/Event"
+      )
+        .venue
+          time(
+            itemprop="startDate"
+            content="2016-04-21T20:00"
+          )
+          span(itemprop="name")= event.name
+          div(
+            itemprop="location"
+            itemscope
+            itemtype="http://schema.org/Place"
+          )
+            div(itemprop="name")= event.placeName
+            div(
+              itemprop="address"
+              itemscope
+              itemtype="http://schema.org/PostalAddress"
+            )
+              span(itemprop="addressLocality") Bowen Island Municipality
+              span(itemprop="addressRegion") British Columbia
+        div(itemprop="description")= event.description
+        div(
+          itemprop="offers"
+          itemscope
+          itemtype="http://schema.org/AggregateOffer"
+        )= event.bookingInfo
+        if event.price
+          p Cost:
+            span(itemprop="lowPrice")= event.price
+        if event.limit
+          p
+            span(itemprop="offerCount")= event.limit
+            | spaces available
+    button.off-page-jump See More Events

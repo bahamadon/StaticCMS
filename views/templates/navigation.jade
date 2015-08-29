@@ -1,0 +1,33 @@
+header.centered-navigation(role="banner")
+  .centered-navigation-wrapper
+    #menu-title
+      svg.icon
+        use(xlink:href="#textLogo")
+    a.mobile-logo(href="javascript:void(0)")
+      svg.icon
+        use(xlink:href="#textLogo")
+    a(
+      id="js-centered-navigation-mobile-menu"
+      class="centered-navigation-mobile-menu"
+      href="javascript:void(0)"
+    ) MENU
+    nav(role="navigation")
+      ul(
+        id="js-centered-navigation-menu"
+        class="centered-navigation-menu"
+        show
+      )
+        li.nav-link
+          a.scroll-on-page-link(href="#upcoming") Upcoming Events
+        li.nav-link
+          a.scroll-on-page-link(href="#activities") Club Activities
+        li.nav-link.logo
+          a.logo(href="javascript(0)")
+            img(
+              src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png"
+              alt="Logo image"
+            )
+        li.nav-link
+          a.scroll-on-page-link(href="#news") News
+        li.nav-link
+          a.scroll-on-page-link(href="#membership") Membership Information
