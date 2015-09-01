@@ -2,7 +2,7 @@
 section#upcoming
   h1 Upcoming Events
   .container
-    each event in contentful.entries
+    each event in contentful.scheduledevents
       .row(
         itemprop="event"
         itemscope
@@ -12,7 +12,7 @@ section#upcoming
           time(
             itemprop="startDate"
             content="2016-04-21T20:00"
-          )
+          )= locals.moment(event.timeAndDate).format("dddd, MMM DD [at] h:mm  A")
           span(itemprop="name")= event.name
           div(
             itemprop="location"

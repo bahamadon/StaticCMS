@@ -85,7 +85,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/js/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -171,7 +171,7 @@
 	  }
 	}
 
-	ready(function () {loadSvg(".icon", "images/TextLogo")});
+	ready(function () {loadSvg(".icon", "img/TextLogo")});
 
 
 	__webpack_require__.e/* require */(2, function(__webpack_require__) { var __WEBPACK_AMD_REQUIRE_ARRAY__ = [

@@ -5,8 +5,9 @@ contentful   = require 'roots-contentful'
 config       = require './contentful'
 marked       = require 'marked'
 webpack      = require 'roots-webpack'
-wbpkconfig  = require './webpack.config.js'
+wbpkconfig   = require './webpack.config.js'
 path         = require 'path'
+moment       = require 'moment'
 
 module.exports =
   ignores: [
@@ -19,6 +20,7 @@ module.exports =
 
   locals:
     marked: marked
+    moment: moment
 
   extensions: [
                contentful(config)

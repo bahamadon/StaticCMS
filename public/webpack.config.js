@@ -6,8 +6,10 @@ module.exports = {
        entry: path.resolve(__dirname, './scripts/init.js'),
        output: {
          path: path.resolve(__dirname, './assets/js/'),
-         filename: 'bundle.js' },
-         module: {
+         filename: 'bundle.js',
+         publicPath: '/js/' 
+       },
+      module: {
          loaders: [
          {
             test: /modernizr/,
@@ -18,5 +20,5 @@ module.exports = {
             loader: "imports?this=>window"
          }
          ]
-         }};
+      }};
 

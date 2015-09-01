@@ -74,7 +74,7 @@ function loadSvg(selector, url) {
   }
 }
 
-ready(function () {loadSvg(".icon", "images/TextLogo")});
+ready(function () {loadSvg(".icon", "img/TextLogo")});
 
 
 require([
